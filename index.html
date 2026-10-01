@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101310">
+  <meta name="description" content="Gabriel Ávila, fotógrafo deportivo. Cobertura de partidos, torneos y atletas en Costa Rica. La emoción del deporte, capturada en un instante.">
+  <title>Gabriel Ávila — Fotografía deportiva</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23101310'/%3E%3Ccircle cx='32' cy='32' r='21' fill='none' stroke='%23d9f03f' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23d9f03f'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Gabriel Ávila, inicio"><span class="brand-mark" aria-hidden="true">G<span>A</span></span><span class="brand-name">GABRIEL ÁVILA<small>FOTOGRAFÍA DEPORTIVA</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="#portafolio">Portafolio</a><a href="#cobertura">Cobertura</a><a href="#sobre-mi">Sobre mí</a><a class="nav-contact" href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="images/rosario-01.jpeg" alt="Futbolista del Rosario disputa el balón bajo la lluvia" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <p class="eyebrow light"><span class="eyebrow-line"></span> GABRIEL ÁVILA / FOTÓGRAFO DEPORTIVO</p>
+          <h1 id="hero-title">LA EMOCIÓN<br>DEL DEPORTE<span class="hero-period">.</span></h1>
+          <p class="hero-subtitle">Capturada en un instante.</p>
+          <a class="button button-accent" href="#portafolio">VER PORTAFOLIO <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-side-note">COSTA RICA <span>—</span> FOTOGRAFÍA DEPORTIVA</div>
+      </div>
+      <div class="hero-bottom container"><span>01 / EL INSTANTE</span><a href="#intro">DESLIZA PARA EXPLORAR <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="intro section-pad" id="intro">
+      <div class="container intro-grid">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> DETRÁS DE CADA IMAGEN</p><p class="section-index">01 — 05</p></div>
+        <div><h2 class="intro-title">MOMENTOS QUE <em>MERECEN</em> SER RECORDADOS.</h2><div class="intro-bottom"><p>Mi trabajo consiste en capturar esos segundos que suceden una sola vez. Un gol, una celebración, un salto, una victoria o un momento de esfuerzo. Cada fotografía cuenta una historia.</p><span class="asterisk" aria-hidden="true">✳</span></div></div>
+      </div>
+    </section>
+
+    <section class="portfolio section-pad" id="portafolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> TRABAJO SELECCIONADO</p><h2 id="portfolio-title">PORTAFOLIO<span class="accent-dot">.</span></h2></div><p>Instantes reales. Historias que siguen vivas después del último minuto.</p></div>
+        <div class="portfolio-controls" role="group" aria-label="Categorías del portafolio">
+          <button class="category active" type="button" data-category="futbol" aria-pressed="true">FÚTBOL <span>06</span></button>
+          <button class="category" type="button" data-category="automovilismo" aria-pressed="false">AUTOMOVILISMO <span>00</span></button>
+        </div>
+        <div class="subcategory-controls" id="football-filters" role="group" aria-label="Equipos y torneos de fútbol">
+          <button class="subcategory active" type="button" data-filter="todos" aria-pressed="true">Todo fútbol</button>
+          <button class="subcategory" type="button" data-filter="jdn" aria-pressed="false">JDN 2025</button>
+          <button class="subcategory" type="button" data-filter="escorpiones" aria-pressed="false">Escorpiones</button>
+          <button class="subcategory" type="button" data-filter="pitbulls" aria-pressed="false">Pitbulls</button>
+          <button class="subcategory" type="button" data-filter="rosario" aria-pressed="false">Rosario</button>
+        </div>
+        <div class="gallery" id="gallery">
+          <button class="photo-card wide" type="button" data-group="rosario" data-image="images/rosario-01.jpeg" data-alt="Futbolista de Rosario bajo la lluvia"><img src="images/rosario-01.jpeg" alt="Futbolista de Rosario bajo la lluvia" loading="lazy"><span class="photo-caption"><strong>ROSARIO</strong><span>FÚTBOL / 01</span></span></button>
+          <button class="photo-card" type="button" data-group="rosario" data-image="images/rosario-02.jpeg" data-alt="Jugada entre Rosario y un equipo rival bajo la lluvia"><img src="images/rosario-02.jpeg" alt="Jugada entre Rosario y un equipo rival bajo la lluvia" loading="lazy"><span class="photo-caption"><strong>ROSARIO</strong><span>FÚTBOL / 02</span></span></button>
+          <button class="photo-card" type="button" data-group="pendiente" data-image="images/futbol-03.jpeg" data-alt="Joven futbolista de uniforme azul controla el balón"><img src="images/futbol-03.jpeg" alt="Joven futbolista de uniforme azul controla el balón" loading="lazy"><span class="photo-caption"><strong>EN LA CANCHA</strong><span>FÚTBOL / 03</span></span></button>
+          <button class="photo-card" type="button" data-group="pendiente" data-image="images/futbol-04.jpeg" data-alt="Futbolista de uniforme azul realiza una jugada aérea"><img src="images/futbol-04.jpeg" alt="Futbolista de uniforme azul realiza una jugada aérea" loading="lazy"><span class="photo-caption"><strong>EN LA CANCHA</strong><span>FÚTBOL / 04</span></span></button>
+          <button class="photo-card" type="button" data-group="pendiente" data-image="images/futbol-05.jpeg" data-alt="Futbolista de uniforme celeste controla el balón"><img src="images/futbol-05.jpeg" alt="Futbolista de uniforme celeste controla el balón" loading="lazy"><span class="photo-caption"><strong>EN LA CANCHA</strong><span>FÚTBOL / 05</span></span></button>
+          <button class="photo-card wide" type="button" data-group="pendiente" data-image="images/futbol-06.jpeg" data-alt="Dos futbolistas compiten por el balón"><img src="images/futbol-06.jpeg" alt="Dos futbolistas compiten por el balón" loading="lazy"><span class="photo-caption"><strong>EN LA CANCHA</strong><span>FÚTBOL / 06</span></span></button>
+        </div>
+        <div class="empty-gallery" id="empty-gallery" hidden><span class="empty-number">00</span><div><h3 id="empty-title">Galería en preparación</h3><p id="empty-message">Pronto habrá fotografías en esta sección.</p></div></div>
+        <p class="portfolio-note" id="portfolio-note">Fotografías 03–06 pendientes de confirmar por equipo o torneo.</p>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="Mi mirada"><div class="container manifesto-inner"><p class="eyebrow light"><span class="eyebrow-line"></span> MI MIRADA</p><p>EMOCIÓN <span>·</span> ESFUERZO <span>·</span> PASIÓN <span>·</span> VICTORIA</p><h2>UN INSTANTE.<br>UNA IMAGEN.<br><em>UNA HISTORIA.</em></h2><p class="manifesto-desc">Estar en el lugar correcto. Esperar el momento exacto. Capturarlo para siempre.</p></div></section>
+
+    <section class="services section-pad" id="cobertura"><div class="container"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> COBERTURA DEPORTIVA</p><h2>CAPTURO EL MOMENTO<span class="accent-dot">.</span></h2></div><p>Tú vives la experiencia. Yo me encargo de que puedas volver a ella.</p></div><div class="service-list"><article><span class="service-number">01</span><h3>PARTIDOS</h3><p>Cobertura de encuentros deportivos: las jugadas, las emociones y lo que ocurre entre ellas.</p><span class="service-symbol" aria-hidden="true">↗</span></article><article><span class="service-number">02</span><h3>TORNEOS</h3><p>Fotografías de competencias para equipos, jugadores y organizaciones deportivas.</p><span class="service-symbol" aria-hidden="true">↗</span></article><article><span class="service-number">03</span><h3>ATLETAS</h3><p>Sesiones para deportistas que quieren mostrar su esfuerzo, personalidad y pasión.</p><span class="service-symbol" aria-hidden="true">↗</span></article></div></div></section>
+
+    <section class="about" id="sobre-mi"><div class="about-photo"><img src="images/gabriel-avila.jpeg" alt="Gabriel Ávila fotografiando un evento deportivo" loading="lazy"></div><div class="about-copy"><p class="eyebrow light"><span class="eyebrow-line"></span> SOBRE MÍ</p><h2>GABRIEL<br>ÁVILA<span class="accent-dot">.</span></h2><p class="about-role">FOTÓGRAFO DEPORTIVO</p><p>Me apasiona la fotografía deportiva porque cada competencia tiene una historia diferente.</p><p>Mi objetivo es capturar la energía, el esfuerzo y la emoción de cada deportista, y convertir esos momentos en recuerdos que puedan volver a vivirse a través de una fotografía.</p><div class="about-statement">EL DEPORTE PASA.<br><span>LA FOTOGRAFÍA QUEDA.</span></div></div></section>
+
+    <section class="style section-pad"><div class="container"><p class="eyebrow"><span class="eyebrow-line"></span> MI ESTILO</p><div class="style-grid"><article><span>01 /</span><h3>CONGELAR<br>EL INSTANTE.</h3><p>Fotografías llenas de movimiento, emoción y personalidad.</p></article><article><span>02 /</span><h3>CONTAR<br>LA HISTORIA.</h3><p>Cada partido tiene momentos que merecen ser recordados.</p></article><article><span>03 /</span><h3>MOSTRAR<br>LA EMOCIÓN.</h3><p>Detrás de cada fotografía hay esfuerzo, pasión y dedicación.</p></article></div></div></section>
+
+    <section class="contact" id="contacto"><div class="container contact-inner"><p class="eyebrow light"><span class="eyebrow-line"></span> HABLEMOS DE TU EVENTO</p><h2>HAGAMOS QUE CADA<br><em>MOMENTO CUENTE.</em></h2><p>¿Tienes un partido, torneo o competencia? Estoy disponible para realizar cobertura fotográfica deportiva.</p><a class="button button-accent" href="https://wa.me/50687316410?text=Hola%20Gabriel%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20cobertura%20fotogr%C3%A1fica." target="_blank" rel="noopener noreferrer">CONTACTAR POR WHATSAPP <span aria-hidden="true">↗</span></a><a class="contact-number" href="tel:+50687316410">+506 8731-6410</a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">G<span>A</span></span><span class="brand-name">GABRIEL ÁVILA<small>FOTOGRAFÍA DEPORTIVA</small></span></a><p>© <span id="year">2026</span> Gabriel Ávila. Todos los derechos reservados.</p><a href="#inicio">VOLVER ARRIBA ↑</a></div></footer>
+
+  <a class="whatsapp-float" href="https://wa.me/50687316410?text=Hola%20Gabriel%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20cobertura%20fotogr%C3%A1fica." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Gabriel por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 2.9 23.5L.8 31l7.7-2A15.2 15.2 0 1 0 16 .8Zm0 27.7a12.5 12.5 0 0 1-6.4-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.5 12.5 0 1 1 16 28.5Zm6.9-9.4c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-2-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7.4-.6c.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.8c.2.2 2.5 3.9 6.1 5.4 3.6 1.6 3.6 1 4.3 1 .7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5Z"/></svg></a>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Fotografía ampliada"><button class="lightbox-close" type="button" aria-label="Cerrar fotografía">×</button><img src="" alt=""><p></p><div class="lightbox-actions"><button type="button" id="prev-photo" aria-label="Fotografía anterior">←</button><button type="button" id="next-photo" aria-label="Fotografía siguiente">→</button></div></dialog>
+</body>
+</html>
