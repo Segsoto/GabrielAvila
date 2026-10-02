@@ -11,49 +11,7 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuToggle.setAttribute('aria-label', 'Abrir menú');
 }));
 
-const categories = [...document.querySelectorAll('.category')];
-const filters = [...document.querySelectorAll('.subcategory')];
 const cards = [...document.querySelectorAll('.photo-card')];
-const gallery = document.getElementById('gallery');
-const empty = document.getElementById('empty-gallery');
-const emptyTitle = document.getElementById('empty-title');
-const emptyMessage = document.getElementById('empty-message');
-const footballFilters = document.getElementById('football-filters');
-const note = document.getElementById('portfolio-note');
-let category = 'futbol';
-let filter = 'todos';
-
-function renderGallery() {
-  const isFootball = category === 'futbol';
-  footballFilters.hidden = !isFootball;
-  gallery.hidden = !isFootball;
-  note.hidden = !isFootball || filter !== 'todos';
-  let visible = 0;
-  cards.forEach(card => {
-    const show = isFootball && (filter === 'todos' || card.dataset.group === filter);
-    card.hidden = !show;
-    if (show) visible++;
-  });
-  empty.hidden = visible > 0;
-  if (!visible) {
-    emptyTitle.textContent = isFootball ? 'Galería por completar' : 'Wekfest';
-    emptyMessage.textContent = isFootball
-      ? 'Aún no hay fotografías identificadas para esta sección.'
-      : 'La selección de automovilismo estará disponible cuando se incorporen las fotografías de Wekfest.';
-  }
-}
-
-categories.forEach(button => button.addEventListener('click', () => {
-  category = button.dataset.category;
-  categories.forEach(item => { const active = item === button; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
-  renderGallery();
-}));
-filters.forEach(button => button.addEventListener('click', () => {
-  filter = button.dataset.filter;
-  filters.forEach(item => { const active = item === button; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
-  renderGallery();
-}));
-renderGallery();
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = lightbox.querySelector('img');
