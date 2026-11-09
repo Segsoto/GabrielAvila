@@ -11,7 +11,43 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuToggle.setAttribute('aria-label', 'Abrir menú');
 }));
 
+const categories = [...document.querySelectorAll('.category')];
+const filters = [...document.querySelectorAll('.subcategory')];
 const cards = [...document.querySelectorAll('.photo-card')];
+const footballFilters = document.getElementById('football-filters');
+let category = 'futbol';
+let filter = 'todos';
+
+function renderGallery() {
+  const isFootball = category === 'futbol';
+  footballFilters.hidden = !isFootball;
+  cards.forEach(card => {
+    const cardCategory = card.dataset.category || 'futbol';
+    card.hidden = cardCategory !== category || (isFootball && filter !== 'todos' && card.dataset.group !== filter);
+  });
+}
+
+categories.forEach(button => button.addEventListener('click', () => {
+  category = button.dataset.category;
+  categories.forEach(item => {
+    const active = item === button;
+    item.classList.toggle('active', active);
+    item.setAttribute('aria-pressed', String(active));
+  });
+  renderGallery();
+}));
+
+filters.forEach(button => button.addEventListener('click', () => {
+  filter = button.dataset.filter;
+  filters.forEach(item => {
+    const active = item === button;
+    item.classList.toggle('active', active);
+    item.setAttribute('aria-pressed', String(active));
+  });
+  renderGallery();
+}));
+
+renderGallery();
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = lightbox.querySelector('img');
